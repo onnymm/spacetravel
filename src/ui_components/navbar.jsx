@@ -1,8 +1,28 @@
-const Navbar = () => (
+import { useState } from "react";
+
+const Navbar = () => {
+    const [useNavbarShow, setNavbarShow] = useState(true);
+
+    const activate = () => {
+        setNavbarShow(!useNavbarShow)
+    }
+
+
+    return (
     <>
-        <button className="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false"><span className="sr-only">Menu</span></button>
+        <button
+            className="mobile-nav-toggle"
+            aria-controls="primary-navigation"
+            aria-expanded="false"
+            onClick={activate}
+        >
+            <span className="sr-only">
+                Menu
+            </span>
+        </button>
+
         <nav>
-            <ul id="primary-navigation" className="primary-navigation underline-indicators flex">
+            <ul id="primary-navigation" className={`primary-navigation underline-indicators flex ${useNavbarShow ? "visible" : ""}`}>
                 <li className="active"><a className="uppercase text-white ff-sans-cond letter-spacing-2" href="#"><span>00</span>Home</a></li>
                 <li><a className="uppercase text-white ff-sans-cond letter-spacing-2" href="#"><span>01</span>Destination</a></li>
                 <li><a className="uppercase text-white ff-sans-cond letter-spacing-2" href="#"><span>02</span>Crew</a></li>
@@ -10,6 +30,6 @@ const Navbar = () => (
             </ul>
         </nav>
     </>
-)
+)}
 
 export default Navbar;

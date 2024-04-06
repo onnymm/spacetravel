@@ -305,6 +305,7 @@ select {
 
 .mobile-nav-toggle {
     display: none;
+    transition: 0.5s;
 }
 
 @supports (backdrop-filter: blur(1rem)) {
@@ -324,6 +325,10 @@ select {
         margin: 0;
         flex-direction: column;
         transform: translateX(100%);
+    }
+
+    .primary-navigation.visible {
+        transform: translateX(0%);
     }
 
     .mobile-nav-toggle {
