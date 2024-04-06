@@ -299,6 +299,8 @@ select {
     list-style: none;
     padding: 0;
     margin: 0;
+    background-color: hsl( var(--clr-white), 0.05);
+    backdrop-filter: blur(1rem);
 }
 
 @media (max-width: 35rem) {
@@ -307,10 +309,13 @@ select {
         position: fixed;
         z-index: 1000;
         inset: 0 0 0 20%;
-        background-color: black;
         padding: min(20rem, 15vh) 2em;
         margin: 0;
         flex-direction: column;
+    }
+
+    .primary-navigation.underline-indicators > .active {
+        border: 0;
     }
 }
 
