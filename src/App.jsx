@@ -1,12 +1,12 @@
-import DesignSystem from './design-system'
-// import Index from './routes'
+// import DesignSystem from './design-system'
+import Index from './routes'
 
 function App() {
 
   return (
     <>
-      <DesignSystem/>
-      {/* <Index /> */}
+      {/* <DesignSystem/> */}
+      <Index />
     </>
   )
 }
