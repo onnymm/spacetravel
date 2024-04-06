@@ -1,6 +1,6 @@
 import Logo from "../assets/logo.svg";
 import LargeButton from "../ui_components/large-button";
-// import Navbar from "../ui_components/navbar";
+import Navbar from "../ui_components/navbar";
 
 const Index = () => (
     <main className="home">
@@ -9,7 +9,7 @@ const Index = () => (
                 <img src={Logo} alt="" />
             </div>
             
-            {/* <Navbar /> */}
+            <Navbar />
         </header>
         <div className="grid-container grid-container--home">
             <div>
