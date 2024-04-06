@@ -393,7 +393,9 @@ li {
 }
 
 @media (min-width: 35em) and (max-width: 45em) {
-
+    .primary-navigation span {
+        display: none;
+    }
 }
 
 .underline-indicators > * {
