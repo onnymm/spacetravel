@@ -161,12 +161,19 @@ select {
 }
 
 .grid-container {
+    text-align: center;
     border: 5px solid green;
     display: grid;
+    place-items: center;
+}
+
+.grid-container * {
+    max-width: 45ch;
 }
 
 @media (min-width: 45rem ) {
     .grid-container {
+        text-align: left;
         column-gap: var(--container-gap, 2rem);
         grid-template-columns: minmax(2rem, 1fr) repeat(2, minmax(0, 40rem)) minmax(2rem, 1fr);
     }
@@ -255,6 +262,7 @@ select {
     position: relative;
     display: inline-grid;
     z-index: 1;
+    font-size: 2rem;
     place-items: center;
     padding: 0 2em;
     border-radius: 50%;
