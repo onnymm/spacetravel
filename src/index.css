@@ -299,8 +299,14 @@ select {
     list-style: none;
     padding: 0;
     margin: 0;
-    background-color: hsl( var(--clr-white), 0.05);
-    backdrop-filter: blur(1rem);
+    background-color: hsl( var(--clr-dark), 0.95);
+}
+
+@supports (backdrop-filter: blur(1rem)) {
+    .primary-navigation {
+        background-color: hsl( var(--clr-white), 0.05);
+        backdrop-filter: blur(1rem);
+    }
 }
 
 @media (max-width: 35rem) {
