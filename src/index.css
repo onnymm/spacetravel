@@ -162,7 +162,6 @@ select {
 
 .grid-container {
     text-align: center;
-    border: 5px solid green;
     display: grid;
     place-items: center;
     padding-inline: 1rem;
@@ -189,12 +188,10 @@ select {
 
     .grid-container > *:first-child {
         grid-column: 2;
-        outline: 1px solid red;
     }
     
     .grid-container > *:last-child {
         grid-column: 3;
-        outline: 1px solid yellow;
     }
 }
 
@@ -271,7 +268,7 @@ select {
     position: relative;
     display: inline-grid;
     z-index: 1;
-    font-size: 2rem;
+    font-size: 1.5rem;
     place-items: center;
     padding: 0 2em;
     border-radius: 50%;
@@ -377,4 +374,26 @@ select {
 .number-indicators > [aria-selected="true"] {
     background-color: hsl( var(--clr-white), 1);
     color: hsl( var(--clr-dark), 1)
+}
+
+body * {
+    background-size: cover;
+    background-position: bottom center;
+}
+
+.home {
+    background-image: url("./assets/background-home-mobile.jpg");
+}
+
+@media (min-width: 35rem) {
+    .home {
+        background-image: url("./assets/background-home-tablet.jpg");
+    }
+}
+
+@media (min-width: 45rem) {
+    .home {
+        background-position: center;
+        background-image: url("./assets/background-home-desktop.jpg");
+    }
 }
