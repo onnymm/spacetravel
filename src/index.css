@@ -165,6 +165,7 @@ select {
     border: 5px solid green;
     display: grid;
     place-items: center;
+    padding-inline: 1rem;
 }
 
 .grid-container * {
@@ -175,7 +176,15 @@ select {
     .grid-container {
         text-align: left;
         column-gap: var(--container-gap, 2rem);
-        grid-template-columns: minmax(2rem, 1fr) repeat(2, minmax(0, 40rem)) minmax(2rem, 1fr);
+        grid-template-columns: minmax(1rem, 1fr) repeat(2, minmax(0, 40rem)) minmax(1rem, 1fr);
+    }
+
+    .grid-container--home {
+        padding-bottom: max(6rem, 15vh);
+    }
+
+    .grid-container--home > * {
+        align-self: end;
     }
 
     .grid-container > *:first-child {
