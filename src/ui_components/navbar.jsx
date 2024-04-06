@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 const Navbar = () => {
-    const [useNavbarShow, setNavbarShow] = useState(true);
+    const [useNavbarShow, setNavbarShow] = useState(false);
 
     const activate = () => {
         setNavbarShow(!useNavbarShow)

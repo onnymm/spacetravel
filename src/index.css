@@ -318,6 +318,7 @@ li {
 }
 
 .primary-navigation {
+    --gap: 2rem clamp(0rem, 3vw, 4rem);
     --underline-gap: 2rem;
     list-style: none;
     padding: 0;
@@ -393,6 +394,10 @@ li {
 }
 
 @media (min-width: 35em) and (max-width: 45em) {
+    .primary-navigation {
+        padding-inline: 3rem;
+    }
+
     .primary-navigation span {
         display: none;
     }
