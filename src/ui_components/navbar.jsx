@@ -11,7 +11,7 @@ const Navbar = () => {
     return (
     <>
         <button
-            className="mobile-nav-toggle"
+            className={`mobile-nav-toggle ${useNavbarShow ? "opened" : ""}`}
             aria-controls="primary-navigation"
             aria-expanded="false"
             onClick={activate}

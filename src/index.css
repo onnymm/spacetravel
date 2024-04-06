@@ -342,11 +342,21 @@ select {
         width: 1.5rem;
         aspect-ratio: 1;
         background-repeat: no-repeat ;
+        background-position: center;
         border: 0;
+    }
+
+    .mobile-nav-toggle.opened {
+        background-image: url("./assets/icon-close.svg")
     }
 
     .primary-navigation.underline-indicators > .active {
         border: 0;
+    }
+
+    .mobile-nav-toggle:focus-visible {
+        outline: 5px solid red;
+        outline-offset: 5px;
     }
 }
 
