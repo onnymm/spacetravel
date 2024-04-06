@@ -21,7 +21,7 @@ const Navbar = () => {
             </span>
         </button>
 
-        <nav>
+        <nav style={{margin: 0}}>
             <ul id="primary-navigation" className={`primary-navigation underline-indicators flex ${useNavbarShow ? "visible" : ""}`}>
                 <li className="active"><a className="uppercase text-white ff-sans-cond letter-spacing-2" href="#"><span>00</span>Home</a></li>
                 <li><a className="uppercase text-white ff-sans-cond letter-spacing-2" href="#"><span>01</span>Destination</a></li>

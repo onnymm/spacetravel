@@ -133,6 +133,16 @@ select {
     }
 }
 
+nav {
+    height: 100%;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 /*  -------------------------------- */
 /* UTILITY CLASSES                   */
 /* --------------------------------- */
@@ -180,7 +190,7 @@ select {
     }
 
     .grid-container--home {
-        padding-bottom: max(6rem, 15vh);
+        padding-bottom: max(6rem, 2vh);
     }
 
     .grid-container--home > * {
@@ -295,12 +305,34 @@ select {
     transform: scale(1.5);
 }
 
+/* Primary header */
+
+.logo {
+    margin: 2rem clamp(1.5rem, 5vw, 3.5rem);
+}
+
+.primary-header {
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+}
+
 .primary-navigation {
     --underline-gap: 2rem;
     list-style: none;
     padding: 0;
     margin: 0;
+    height: 100%;
     background-color: hsl( var(--clr-dark), 0.95);
+}
+
+.primary-navigation a {
+    text-decoration: none;
+}
+
+.primary-navigation a > span {
+    font-weight: 700;
+    margin-right: 0.5em;
 }
 
 .mobile-nav-toggle {
@@ -360,13 +392,8 @@ select {
     }
 }
 
-.primary-navigation a {
-    text-decoration: none;
-}
+@media (min-width: 35em) and (max-width: 45em) {
 
-.primary-navigation a > span {
-    font-weight: 700;
-    margin-right: 0.5em;
 }
 
 .underline-indicators > * {

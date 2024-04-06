@@ -5,7 +5,7 @@ import Navbar from "../ui_components/navbar";
 const Index = () => (
     <main className="home">
         <header className="primary-header flex">
-            <div>
+            <div className="logo">
                 <img src={Logo} alt="" />
             </div>
             
