@@ -3,7 +3,7 @@ import LargeButton from "../ui_components/large-button";
 import Navbar from "../ui_components/navbar";
 
 const Index = () => (
-    <main className="home">
+    <div className="home">
         <header className="primary-header flex">
             <div className="logo">
                 <img src={Logo} alt="" />
@@ -11,7 +11,7 @@ const Index = () => (
             
             <Navbar />
         </header>
-        <div className="grid-container grid-container--home">
+        <main className="grid-container grid-container--home">
             <div>
                 <h1 className="text-accent fs-500 ff-sans-cond uppercase letter-spacing-1">So, you want to travel to
                 <span className="d-block fs-900 ff-serif text-white">Space</span></h1>
@@ -20,8 +20,8 @@ const Index = () => (
             <div>
                 <LargeButton />
             </div>
-        </div>
-    </main>
+        </main>
+    </div>
 )
 
 export default Index;
