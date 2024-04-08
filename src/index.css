@@ -188,6 +188,19 @@ li {
         width: clamp(33em, 37em, 80vw);
         height: 70%;
         display: flex;
+        order: 2;
+    }
+
+    .primary-header::after {
+        content: '';
+        display: block;
+        position: relative;
+        height: 1px;
+        width: clamp(0%, calc(95vw - 42em), 100%);
+        margin-left: 0;
+        margin-right: -3rem;
+        background-color: hsl(var(--clr-white), 0.66);
+        order: 1;
     }
 
     nav > * > *:last-child {
