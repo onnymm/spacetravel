@@ -246,12 +246,19 @@ li {
 }
 
 .skip-to-content {
+    outline: none;
     position: absolute;
     z-index: 9999;
     background-color: hsl(var(--clr-white), 1);
     color: black;
     padding: 0.5em 1em;
     margin-inline: auto;
+    transform: translateY(-110%);
+    transition: transform 0.2s ease-in;
+}
+
+.skip-to-content:focus {
+    transform: translateY(0);
 }
 
 /* Colors */
