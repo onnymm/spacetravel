@@ -245,6 +245,15 @@ li {
     border: 0;
 }
 
+.skip-to-content {
+    position: absolute;
+    z-index: 9999;
+    background-color: hsl(var(--clr-white), 1);
+    color: black;
+    padding: 0.5em 1em;
+    margin-inline: auto;
+}
+
 /* Colors */
 
 .bg-dark { background-color: hsl( var(--clr-dark), 1);}

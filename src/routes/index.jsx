@@ -4,6 +4,7 @@ import Navbar from "../ui_components/navbar";
 
 const Index = () => (
     <div className="home">
+        <a className="skip-to-content" href="#main">Skip to content</a>
         <header className="primary-header flex">
             <div className="logo">
                 <img src={Logo} alt="" />
@@ -11,7 +12,7 @@ const Index = () => (
             
             <Navbar />
         </header>
-        <main className="grid-container grid-container--home">
+        <main id="main" className="grid-container grid-container--home">
             <div>
                 <h1 className="text-accent fs-500 ff-sans-cond uppercase letter-spacing-1">So, you want to travel to
                 <span className="d-block fs-900 ff-serif text-white">Space</span></h1>

@@ -23,10 +23,10 @@ const Navbar = () => {
 
         <nav style={{margin: 0}}>
             <ul id="primary-navigation" className={`primary-navigation underline-indicators flex ${useNavbarShow ? "visible" : ""}`}>
-                <li className="active"><a className="uppercase text-white ff-sans-cond letter-spacing-2" href="#"><span>00</span>Home</a></li>
-                <li><a className="uppercase text-white ff-sans-cond letter-spacing-2" href="#"><span>01</span>Destination</a></li>
-                <li><a className="uppercase text-white ff-sans-cond letter-spacing-2" href="#"><span>02</span>Crew</a></li>
-                <li><a className="uppercase text-white ff-sans-cond letter-spacing-2" href="#"><span>03</span>Technology</a></li>
+                <li className="active"><a className="uppercase text-white ff-sans-cond letter-spacing-2" href="#"><span aria-hidden="true">00</span>Home</a></li>
+                <li><a className="uppercase text-white ff-sans-cond letter-spacing-2" href="#"><span aria-hidden="true">01</span>Destination</a></li>
+                <li><a className="uppercase text-white ff-sans-cond letter-spacing-2" href="#"><span aria-hidden="true">02</span>Crew</a></li>
+                <li><a className="uppercase text-white ff-sans-cond letter-spacing-2" href="#"><span aria-hidden="true">03</span>Technology</a></li>
             </ul>
         </nav>
     </>
