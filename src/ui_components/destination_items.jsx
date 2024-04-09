@@ -1,20 +1,25 @@
 const DestinationItems = ({setItem, data}) => (
-    <div>
+    <ul className="flex">
         {data.destinations.map(
             (destination, index) => (
-                <button
-                    key={index}
-                    onClick={
-                        () => (
-                            setItem(destination.name)
-                        )
-                    }
+                <li key={index}
+                    className="underline-indicators ff-sans-cond fs-500"
                 >
-                    {destination.name}
-                </button>
+                    <button
+                        style={{backgroundColor: 'transparent'}}
+                        className="uppercase text-accent bg-dark"
+                        onClick={
+                            () => (
+                                setItem(destination.name)
+                            )
+                        }
+                    >
+                        {destination.name}
+                    </button>
+                </li>
             )
         )}
-    </div>
+    </ul>
 )
 
 export default DestinationItems;
