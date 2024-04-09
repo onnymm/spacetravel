@@ -1,5 +1,5 @@
 const DestinationItems = ({setItem, data}) => (
-    <ul className="flex">
+    <ul className="tab-list flex">
         {data.destinations.map(
             (destination, index) => (
                 <li key={index}
