@@ -10,11 +10,11 @@ const DestinationDescription = ({useItem}) => {
             <div className="destination-meta flex">
                 <div>
                     <h3 className="text-accent fs-200 uppercase">Avg. distance: </h3>
-                    <p className="fs-500 ff-serif uppercase">{destination.distance}</p>
+                    <p className="ff-serif uppercase">{destination.distance}</p>
                 </div>
                 <div>
                     <h3 className="text-accent fs-200 uppercase">Est. travel time: </h3>
-                    <p className="fs-500 ff-serif uppercase">{destination.travel}</p>
+                    <p className="ff-serif uppercase">{destination.travel}</p>
                 </div>
             </div>
         </article>
