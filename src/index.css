@@ -17,7 +17,7 @@
     --fs-800: 3.5rem;
     --fs-700: 1.5rem;
     --fs-600: 1rem;
-    --fs-500: 1.75rem;
+    --fs-500: 1rem;
     --fs-400: 0.9375rem;
     --fs-300: 1rem;
     --fs-200: 0.875rem;
@@ -34,6 +34,7 @@
         --fs-800: 5rem;
         --fs-700: 2.5rem;
         --fs-600: 1.5rem;
+        --fs-500: 1.25rem;
         --fs-400: 1rem;
     }
 
@@ -167,71 +168,6 @@ li {
     margin-inline: auto;
     max-width: 60rem;
 }
-
-.grid-container {
-    text-align: center;
-    display: grid;
-    place-items: center;
-    padding-inline: 1rem;
-}
-
-.grid-container * {
-    max-width: 45ch;
-}
-
-@media (min-width: 45rem ) {
-    nav {
-        width: clamp(33em, 37em, 80vw);
-        height: 70%;
-        display: flex;
-        order: 2;
-    }
-
-    .primary-header::after {
-        content: '';
-        display: block;
-        position: relative;
-        height: 1px;
-        width: clamp(0%, calc(95vw - 42em), 100%);
-        margin-left: 0;
-        margin-right: -3rem;
-        background-color: hsl(var(--clr-white), 0.66);
-        order: 1;
-    }
-
-    nav > * > *:last-child {
-        padding-right: 2em;
-    }
-
-    .primary-navigation {
-        width: 100%;
-        justify-content: flex-end;
-    }
-
-    .grid-container {
-        text-align: left;
-        column-gap: var(--container-gap, 2rem);
-        grid-template-columns: minmax(1rem, 1fr) repeat(2, minmax(0, 40rem)) minmax(1rem, 1fr);
-    }
-
-    .grid-container--home {
-        padding-bottom: max(6rem, 2vh);
-    }
-
-    .grid-container--home > * {
-        align-self: end;
-    }
-
-    .grid-container > *:first-child {
-        grid-column: 2;
-    }
-    
-    .grid-container > *:last-child {
-        grid-column: 3;
-    }
-}
-
-
 
 .sr-only {
     position: absolute;
@@ -528,5 +464,108 @@ body * {
     .home {
         background-position: center;
         background-image: url("./assets/background-home-desktop.jpg");
+    }
+}
+
+/*  -------------------------------- */
+/* LAYOUTS                           */
+/* --------------------------------- */
+
+.grid-container {
+    text-align: center;
+    display: grid;
+    place-items: center;
+    padding-inline: 1rem;
+    padding-bottom: 4rem;
+}
+
+.grid-container * {
+    max-width: 45ch;
+}
+
+.numbered-title {
+    grid-area: title;
+}
+
+/* Destination layout */
+
+.grid-container--destination {
+    --flow-space: 2rem;
+    grid-template-areas: 
+    'title'
+    'image'
+    'tabs'
+    'content';
+}
+
+.grid-container--destination > img {
+    grid-area: image;
+    max-width: 60%;
+}
+
+.grid-container--destination > .tab-list {
+    grid-area: tabs;
+}
+
+.grid-container--destination > .destination-info {
+    grid-area: content;
+}
+
+.destination-meta {
+    flex-direction: column;
+    border-top: 1px solid hsl( var(--clr-light), 0.25);
+    padding-top: 2.5rem;
+    margin-top: 2.5rem;
+}
+
+@media (min-width: 45rem ) {
+    nav {
+        width: clamp(33em, 37em, 80vw);
+        height: 70%;
+        display: flex;
+        order: 2;
+    }
+
+    .primary-header::after {
+        content: '';
+        display: block;
+        position: relative;
+        height: 1px;
+        width: clamp(0%, calc(95vw - 42em), 100%);
+        margin-left: 0;
+        margin-right: -3rem;
+        background-color: hsl(var(--clr-white), 0.66);
+        order: 1;
+    }
+
+    nav > * > *:last-child {
+        padding-right: 2em;
+    }
+
+    .primary-navigation {
+        width: 100%;
+        justify-content: flex-end;
+    }
+
+    .grid-container {
+        text-align: left;
+        column-gap: var(--container-gap, 2rem);
+        grid-template-columns: minmax(1rem, 1fr) repeat(2, minmax(0, 40rem)) minmax(1rem, 1fr);
+    }
+
+    .grid-container--home {
+        padding-bottom: max(6rem, 2vh);
+    }
+
+    .grid-container--home > * {
+        align-self: end;
+    }
+
+    .grid-container > *:first-child {
+        grid-column: 2;
+    }
+    
+    .grid-container > *:last-child {
+        grid-column: 3;
     }
 }
