@@ -4,7 +4,7 @@ const Cover = ({name}) => {
     return (
         <picture>
             <source srcSet={`image-${imageName}.webp`}/>
-            <img src={`image-${imageName}.png`} alt="" />
+            <img src={`image-${imageName}.png`} alt={name} />
         </picture>
     )
 }
