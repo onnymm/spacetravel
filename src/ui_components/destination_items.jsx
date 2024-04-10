@@ -1,25 +1,29 @@
-const DestinationItems = ({setItem, data}) => (
+const DestinationItems = ({useItem, setItem, data}) => {
+    const activate = (e) => (
+        // console.log(e.target.id)
+        setItem(data[e.target.id])
+    )
+
+
+    return (
     <ul className="tab-list flex">
-        {data.destinations.map(
-            (destination, index) => (
+        {data.map(
+            (item, index) => (
                 <li key={index}
-                    className="underline-indicators ff-sans-cond fs-500"
+                    className="underline-navigation ff-sans-cond fs-500"
                 >
                     <button
+                        id={index}
                         style={{backgroundColor: 'transparent'}}
-                        className="uppercase text-accent bg-dark"
-                        onClick={
-                            () => (
-                                setItem(destination.name)
-                            )
-                        }
+                        className={`${(useItem === item) ? "active" : ""} uppercase text-accent bg-dark`}
+                        onClick={activate}
                     >
-                        {destination.name}
+                        {item.name}
                     </button>
                 </li>
             )
         )}
     </ul>
-)
+)}
 
 export default DestinationItems;

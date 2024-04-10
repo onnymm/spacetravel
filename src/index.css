@@ -87,6 +87,10 @@ p {
     font-weight: 400;
 }
 
+button {
+    border: 0;
+}
+
 /* Set up the body */
 body {
     font-family: var(--ff-sans-normal);
@@ -178,6 +182,10 @@ li {
 
 .flow > *:not(:first-child){
     margin-top: var(--flow-space, 1rem);
+}
+
+.flow--space-small {
+    --flow-space: 0.5rem;
 }
 
 .container {
@@ -435,7 +443,9 @@ li {
 }
 
 .tab-list {
-    --gap: 3rem;
+    --gap: clamp(0.5em, calc(1.4vw * 1.8), 5em);
+    --fs-500: clamp(1.3em, 2.5vw, 1.8em);
+    padding: 0;
 }
 
 .dot-indicators > * {
@@ -455,6 +465,20 @@ li {
 
 .dot-indicators > [aria-selected="true"] {
     background-color: hsl( var(--clr-white), 1);
+}
+
+.underline-navigation button {
+    padding: var(--underline-gap, 0.5) 0;
+    border-bottom: 0.2em solid hsl(var(--clr-white), 0);
+}
+
+.underline-navigation button:hover {
+    border-color: hsl( var(--clr-white), 0.5);
+}
+
+.underline-navigation button.active {
+    color: hsl( var(--clr-white), 1);
+    border-color: hsl( var(--clr-white), 1);
 }
 
 .number-indicators > * {
@@ -622,6 +646,10 @@ body * {
     grid-area: content;
 }
 
+.grid-container .crew-details h2 {
+    color: hsl( var(--clr-light), 0.5)
+}
+
 @media (min-width: 35em) {
     .numbered-title {
         justify-self: start;
@@ -698,7 +726,6 @@ body * {
     }
 
     .tab-list {
-        padding: 0;
         margin: 0;
     }
 

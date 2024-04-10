@@ -5,15 +5,16 @@ import DestinationDescription from "../ui_components/destination_description";
 import DestinationItems from "../ui_components/destination_items";
 
 const Destination = () => {
-    const [useItem, setItem] = useState(DATA.destinations[0].name);
-    console.log(useItem)
+    const data = DATA.destinations;
+    const [useDestination, setDestination] = useState(data[0]);
+    // console.log(useDestination)
 
     return (
     <main id="main" className="destination grid-container grid-container--destination flow">
         <h1 className="numbered-title"><span aria-hidden="true">01</span>Pick your destination</h1>
-        <DestinationCover image={useItem}/>
-        <DestinationItems setItem={setItem} data={DATA}/>
-        <DestinationDescription useItem={useItem}/>
+        <DestinationCover image={useDestination.name}/>
+        <DestinationItems useItem={useDestination} setItem={setDestination} data={data}/>
+        <DestinationDescription useItem={useDestination}/>
     </main>
 )}
 
