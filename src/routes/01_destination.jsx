@@ -1,6 +1,6 @@
 import { useState } from "react";
 import DATA from "../data";
-import DestinationCover from "../ui_components/destination_cover";
+import Cover from "../ui_components/cover";
 import DestinationDescription from "../ui_components/destination_description";
 import DestinationItems from "../ui_components/destination_items";
 
@@ -12,7 +12,7 @@ const Destination = () => {
     return (
     <main id="main" className="destination grid-container grid-container--destination flow">
         <h1 className="numbered-title"><span aria-hidden="true">01</span>Pick your destination</h1>
-        <DestinationCover image={useDestination.name}/>
+        <Cover name={useDestination.name}/>
         <DestinationItems useItem={useDestination} setItem={setDestination} data={data}/>
         <DestinationDescription useItem={useDestination}/>
     </main>
