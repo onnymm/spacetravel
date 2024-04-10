@@ -1,8 +1,8 @@
 import { useState } from "react";
 import DATA from "../data";
 import Cover from "../ui_components/cover";
-import CrewDescription from "../ui_components/crew_description";
-import DotNavigation from "../ui_components/dot_navigation";
+import DescriptionCrew from "../ui_components/description_crew";
+import NavigationDot from "../ui_components/navigation_dot";
 
 const Crew = () => {
     const data = DATA.crew;
@@ -11,8 +11,8 @@ const Crew = () => {
     return(
         <main id="main" className="crew grid-container grid-container--crew flow">
             <div className="numbered-title"><span>02</span>Meet you crew</div>
-            <CrewDescription name={useCrewMember.name} role={useCrewMember.role} bio={useCrewMember.bio}/>
-            <DotNavigation useItem={useCrewMember} setItem={setCrewMember} data={data}/>
+            <DescriptionCrew name={useCrewMember.name} role={useCrewMember.role} bio={useCrewMember.bio}/>
+            <NavigationDot useItem={useCrewMember} setItem={setCrewMember} data={data}/>
             <Cover name={useCrewMember.name}/>
         </main>
     )

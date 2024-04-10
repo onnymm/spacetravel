@@ -1,8 +1,8 @@
 import { useState } from "react";
 import DATA from "../data";
 import Cover from "../ui_components/cover";
-import DestinationDescription from "../ui_components/destination_description";
-import DestinationItems from "../ui_components/destination_items";
+import DescriptionDestination from "../ui_components/description_destination";
+import NavigationUnderline from "../ui_components/navigation_underline";
 
 const Destination = () => {
     const data = DATA.destinations;
@@ -13,8 +13,8 @@ const Destination = () => {
     <main id="main" className="destination grid-container grid-container--destination flow">
         <h1 className="numbered-title"><span aria-hidden="true">01</span>Pick your destination</h1>
         <Cover name={useDestination.name}/>
-        <DestinationItems useItem={useDestination} setItem={setDestination} data={data}/>
-        <DestinationDescription useItem={useDestination}/>
+        <NavigationUnderline useItem={useDestination} setItem={setDestination} data={data}/>
+        <DescriptionDestination useItem={useDestination}/>
     </main>
 )}
 
