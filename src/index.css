@@ -117,6 +117,7 @@ body::-webkit-scrollbar-thumb {
 
 #main {
     padding-top: 7rem;
+    min-height: 100vh
 }
 
 /* Use images more easily */
@@ -489,7 +490,7 @@ body * {
     background-image: url("./assets/background-home-mobile.jpg");
 }
 
-@media (min-width: 35rem) {
+@media (min-width: 35.01rem) {
     .home {
         background-image: url("./assets/background-home-tablet.jpg");
     }
@@ -566,12 +567,35 @@ body * {
 }
 
 .destination-meta > * {
-    /* background-color: rgba(80, 255, 255, 0.5); */
     justify-items: center;
 }
 .destination-meta > * > * {
-    /* border: 1px solid red; */
     justify-self: center;
+}
+
+/* Crew layout */
+
+.grid-container--crew {
+    --flow-space: 2rem;
+    grid-template-areas: 
+    'title'
+    'image'
+    'tabs'
+    'content';
+}
+
+.grid-container--crew > img {
+    grid-area: image;
+    max-width: 60%;
+    border-bottom: 1px solid hsl( var(--clr-white), 0.1);
+}
+
+.grid-container--crew > .dots-navigation {
+    grid-area: tabs;
+}
+
+.grid-container--crew > .crew-details {
+    grid-area: content;
 }
 
 @media (min-width: 35em) {
@@ -583,6 +607,17 @@ body * {
     .destination-meta {
         flex-direction: row;
         justify-content: space-evenly;
+    }
+
+    .grid-container--crew {
+        --flow-space: 2rem;
+        grid-template-areas: 
+            'title'
+            'content'
+            'tabs'
+            'image'
+        ;
+        padding-bottom: 0;
     }
 }
 
@@ -613,6 +648,7 @@ body * {
     .primary-navigation {
         width: 100%;
         justify-content: flex-end;
+        --underline-gap: 1.4rem
     }
 
     .grid-container {
@@ -651,12 +687,31 @@ body * {
         '. image content .';
     }
 
-    .grid-container--destination > img {
+    .grid-container--destination > img,
+    .grid-container--crew > img {
         max-width: 80%;
     }
 
     .destination-meta {
         --gap: min(6vw, 6rem);
         justify-content: start;
+    }
+
+    .grid-container--crew {
+        --flow-space: 2rem;
+        padding-bottom: 0;
+        grid-template-areas: 
+            '. title title .'
+            '. content image .'
+            '. tabs image .'
+        ;
+    }
+
+    .grid-container--crew .dots-navigation {
+        justify-self: flex-start;
+    }
+
+    .grid-container--crew img {
+        align-self: flex-end;
     }
 }

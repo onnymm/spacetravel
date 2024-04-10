@@ -5,12 +5,12 @@ const DotNavigation = ({useItem, setItem, data}) => {
     }
 
     return (
-        <div>
+        <div className="flex dots-navigation">
             {
                 data.map(
                     (item, index) => (
                         <div
-                            className={`${(useItem === item)? "active" : ""} dot-indicators flex`} 
+                            className={`${(useItem === item)? "active" : ""} dot-indicators`} 
                             key={index}
                         >
                             <button
