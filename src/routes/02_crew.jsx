@@ -9,7 +9,7 @@ const Crew = () => {
     const [useCrewMember, setCrewMember] = useState(data[0]);
 
     return(
-        <main id="main" className="grid-container grid-container--crew flow">
+        <main id="main" className="crew grid-container grid-container--crew flow">
             <div className="numbered-title"><span>02</span>Meet you crew</div>
             <CrewDescription name={useCrewMember.name} role={useCrewMember.role} bio={useCrewMember.bio}/>
             <DotNavigation useItem={useCrewMember} setItem={setCrewMember} data={data}/>

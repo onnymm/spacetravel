@@ -490,9 +490,25 @@ body * {
     background-image: url("./assets/background-home-mobile.jpg");
 }
 
+.destination {
+    background-image: url("../public/background-destination-mobile.jpg");
+}
+
+.crew {
+    background-image: url("../public/background-crew-mobile.jpg");
+}
+
 @media (min-width: 35.01rem) {
     .home {
         background-image: url("./assets/background-home-tablet.jpg");
+    }
+
+    .destination {
+        background-image: url("../public/background-destination-tablet.jpg");
+    }
+
+    .crew {
+        background-image: url("../public/background-crew-tablet.jpg");
     }
 
     .underline-indicators li {
@@ -506,6 +522,14 @@ body * {
     .home {
         background-position: center;
         background-image: url("./assets/background-home-desktop.jpg");
+    }
+
+    .destination {
+        background-image: url("../public/background-destination-desktop.jpg");
+    }
+
+    .crew {
+        background-image: url("../public/background-crew-desktop.jpg");
     }
 }
 

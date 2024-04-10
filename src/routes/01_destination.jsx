@@ -9,7 +9,7 @@ const Destination = () => {
     console.log(useItem)
 
     return (
-    <main id="main" className="grid-container grid-container--destination flow">
+    <main id="main" className="destination grid-container grid-container--destination flow">
         <h1 className="numbered-title"><span aria-hidden="true">01</span>Pick your destination</h1>
         <DestinationCover image={useItem}/>
         <DestinationItems setItem={setItem} data={DATA}/>
