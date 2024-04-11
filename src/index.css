@@ -845,11 +845,11 @@ body * {
         justify-items: start;
         align-content: start;
         --flow-space: 2rem;
-        grid-template-columns: 2vw 1fr 3fr 3fr;
+        grid-template-columns: 1fr 5rem 2fr 1fr;
         grid-template-areas: 
         '. title title .'
         '. tabs content image';
-        padding-bottom: 3rem;
+        padding-bottom: 0;
     }
 
     .technology .portrait {
@@ -867,5 +867,7 @@ body * {
         flex-direction: column;
     }
 
-
+    /* .technology .portrait {
+        padding-left: 5rem;
+    } */
 }
