@@ -1,5 +1,9 @@
+import { NavLink } from "react-router-dom";
+
 const LargeButton = () => (
-    <a href="#" className="large-button uppercase text-dark bg-white ">Explore</a>
+    <NavLink to="/destination">
+        <div className="large-button uppercase text-dark bg-white ">Explore</div>
+    </NavLink>
 )
 
 export default LargeButton;

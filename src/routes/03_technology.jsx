@@ -10,11 +10,11 @@ const Technology = () => {
     return (
         <main id="main" className="technology grid-container grid-container--technology flow">
             <h1 className="numbered-title"><span aria-hidden='true'>03</span>Technology</h1>
-            <div className="portrait">
-                <Cover name={`${useTechnology.name}-portrait`} type={'jpg'} />
-            </div>
             <div className="landscape">
                 <Cover name={`${useTechnology.name}-landscape`} type={'jpg'} />
+            </div>
+            <div className="portrait">
+                <Cover name={`${useTechnology.name}-portrait`} type={'jpg'} />
             </div>
             <NavigationNumber useItem={useTechnology} setItem={setTechnology} data={data}/>
             <DescriptionTechnology name={useTechnology.name} description={useTechnology.description}/>

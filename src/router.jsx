@@ -1,5 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import App from "./App";
+import DesignSystem from './design-system.jsx';
 import Home from "./routes/00_home.jsx";
 import Destination from "./routes/01_destination.jsx";
 import Crew from "./routes/02_crew.jsx";
@@ -28,6 +29,10 @@ const router = createBrowserRouter(
                     element: <Technology />
                 }
             ]
+        },
+        {
+            path: "/design_system",
+            element: <DesignSystem />
         }
     ]
 )

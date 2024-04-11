@@ -1,4 +1,4 @@
-import { Outlet } from 'react-router-dom';
+import { NavLink, Outlet } from 'react-router-dom';
 import Logo from "../assets/logo.svg";
 import Navbar from "../ui_components/navbar";
 
@@ -7,7 +7,9 @@ const Index = () => (
         <a className="skip-to-content" href="#main">Skip to content</a>
         <header className="primary-header flex">
             <div className="logo">
-                <img src={Logo} alt="" />
+                <NavLink to="/design_system">
+                    <img src={Logo} alt="" />
+                </NavLink>
             </div>
             <Navbar />
         </header>
