@@ -5,11 +5,11 @@ const NavigationDot = ({useItem, setItem, data}) => {
     }
 
     return (
-        <div className="flex dots-navigation">
+        <ul className="flex dots-navigation">
             {
                 data.map(
                     (item, index) => (
-                        <div
+                        <li
                             className={`${(useItem === item)? "active" : ""} dot-indicators`} 
                             key={index}
                         >
@@ -21,11 +21,11 @@ const NavigationDot = ({useItem, setItem, data}) => {
                                     {useItem.name}
                                 </span>
                             </button>
-                        </div>
+                        </li>
                     )
                 )
             }
-        </div>
+        </ul>
     )
 }
 

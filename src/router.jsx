@@ -3,6 +3,7 @@ import App from "./App";
 import Home from "./routes/00_home.jsx";
 import Destination from "./routes/01_destination.jsx";
 import Crew from "./routes/02_crew.jsx";
+import Technology from "./routes/03_technology.jsx";
 
 const router = createBrowserRouter(
     [
@@ -21,6 +22,10 @@ const router = createBrowserRouter(
                 {
                     path: "/crew",
                     element: <Crew />
+                },
+                {
+                    path: "/technology",
+                    element: <Technology />
                 }
             ]
         }

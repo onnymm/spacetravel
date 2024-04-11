@@ -1,6 +1,5 @@
 const NavigationUnderline = ({useItem, setItem, data}) => {
     const activate = (e) => (
-        // console.log(e.target.id)
         setItem(data[e.target.id])
     )
 
@@ -15,6 +14,7 @@ const NavigationUnderline = ({useItem, setItem, data}) => {
                     <button
                         id={index}
                         style={{backgroundColor: 'transparent'}}
+                        aria-selected={(useItem === item) ? "true" : "false"}
                         className={`${(useItem === item) ? "active" : ""} uppercase text-accent bg-dark`}
                         onClick={activate}
                     >

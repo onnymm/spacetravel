@@ -13,7 +13,7 @@ const Crew = () => {
             <div className="numbered-title"><span>02</span>Meet you crew</div>
             <DescriptionCrew name={useCrewMember.name} role={useCrewMember.role} bio={useCrewMember.bio}/>
             <NavigationDot useItem={useCrewMember} setItem={setCrewMember} data={data}/>
-            <Cover name={useCrewMember.name}/>
+            <Cover name={useCrewMember.name} type={'png'}/>
         </main>
     )
 }
