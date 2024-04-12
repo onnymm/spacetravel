@@ -5,24 +5,16 @@ import Destination from "../routes/01_destination.jsx";
 import Crew from "../routes/02_crew.jsx";
 import Technology from "../routes/03_technology.jsx";
 import Navbar from "../ui_components/navbar";
+import Page from './page.jsx';
 
 const Index = () => {
-    const [useIndex, setIndex] = useState(0);
+    const [useIndex, setIndex] = useState('0');
     const pages = [
         Home,
         Destination,
         Crew,
         Technology
     ]
-
-    const Page = ({index}) => {
-        console.log(index)
-        const [UsePage] = useState(pages[index])
-
-        return (
-            UsePage
-        )
-    }
 
     return (
     <div className="page">
@@ -31,9 +23,9 @@ const Index = () => {
             <div className="logo">
                     <img src={Logo} alt="" />
             </div>
-            <Navbar setPage={setIndex}/>
+            <Navbar setPage={setIndex} useIndex={useIndex}/>
         </header>
-        <Page index={useIndex}/>
+        <Page Index={pages[useIndex]} setIndex={setIndex}/>
     </div>
 )}
 

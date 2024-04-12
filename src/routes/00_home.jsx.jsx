@@ -1,7 +1,10 @@
 import LargeButton from "../ui_components/large-button";
 
-const Home = () => {
-    // console.log(setPage)
+const Home = ({setIndex}) => {
+    const activate = () => {
+        setIndex('1')
+    }
+
     return (
     <div className="home">
         <main id="main" className="grid-container grid-container--home">
@@ -10,7 +13,7 @@ const Home = () => {
                 <span className="d-block fs-900 ff-serif text-white">Space</span></h1>
                 <p>{"Let's face it, if you want to go to space, you might as well genuinely go to outer space and now hover kind of on the edge of it. Well, sit back, and relax because we'll give you a truly out of this world experience!"}</p>
             </div>
-            <div>
+            <div onClick={activate}>
                 <LargeButton/>
             </div>
         </main>

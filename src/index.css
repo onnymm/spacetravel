@@ -444,9 +444,9 @@ li {
     border-color: hsl(var(--clr-white), 0.5);
 }
 
-.underline-indicators .active > *,
-.underline-indicators .active > *:hover,
-.underline-indicators .active > *:active {
+.underline-indicators .active,
+.underline-indicators .active:hover,
+.underline-indicators .active:active {
     border-color: hsl(var(--clr-white), 1);
 }
 
